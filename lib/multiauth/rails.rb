@@ -32,13 +32,12 @@ module Multiauth
           next if config["token"].blank?
 
           puts ">> Setting up #{provider} provider"
-	  
-          conditions = {}
+	  options = {}
 	  if scope = config["scope"]
-	    conditions[:scope] = scope
+	    options[:scope] = scope
 	  end
 	  
-          Devise.omniauth provider.underscore.to_sym, config["id"], config["token"], conditions
+          Devise.omniauth provider.underscore.to_sym, config["id"], config["token"], options
         end
       else
         $stderr.puts "Config file doesn't exist: #{config_file}"
