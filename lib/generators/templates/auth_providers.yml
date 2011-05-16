@@ -8,8 +8,12 @@ base: &common
   Github:
     id: <GITHUB ID>
     token: <GITHUB TOKEN>
-  Google:
-    openid: https://www.google.com/accounts/o8/id
+#   Google:
+#     openid: https://www.google.com/accounts/o8/id
+  Google: #Google Apss
+    id: <GOOGLEAPP ID>
+    token: <GOOGLEAPP TOKEN>
+    scope: <SCOPE example: https://maps.google.com/maps/feeds/>
   Yahoo:
     openid: http://yahoo.com
   AOL:
